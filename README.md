@@ -20,8 +20,25 @@
 ## 訓練(Training)
 ### 這邊使用的是 Yolov4 作為物件偵測的機器學習套件，把準備好的圖片放入資料夾中，並且以 80/20 比例分成 訓練集(train)與驗證集(valid)，就可以開始使用 Yolo 來訓練。首先修改一下 data/coco.yaml，指定好圖片放置位置路徑，並將類別數量(nc) 改成 nc:1 以及名稱改成  name: ['bird'] (只有鳥類一種分類)，
 ![3data.jpg](images/3data.png)
-### 把檔案全部上傳到google drive後就可以接著在google colab做一些簡單訓練:
-### 比如: python train.py --cfg 'models/yolov4s-mish.yaml' --data data/coco.yaml' --img 640 --batch 16 --epoch 300
+### 把檔案全部上傳到google drive後就可以接著在google colab做一些簡單訓練 (GPU: P100)
+
+## 結果
+### 這邊做了幾個不同的參數設定來測試效果: (model_4s, 100 epochs vs. 300 epochs) 與 (300 epochs, model_4s vs. model_4l)
+###### python train.py --cfg 'models/yolov4s-mish.yaml' --data data/coco.yaml' --img 640 --batch 16 --epochs 100
+###### python train.py --cfg 'models/yolov4s-mish.yaml' --data data/coco.yaml' --img 640 --batch 16 --epochs 300
+###### python train.py --cfg 'models/yolov4l-mish.yaml' --data data/coco.yaml' --img 640 --batch 6 --epochs 300
+
+* Learning Rate:  
+![4lr.jpg](images/4lr.png)
+
+* mAP / Precision / Recall
+![4mapprc.jpg](images/4mapprc.png)
+
+* Train Loss
+![4train.jpg](images/4train.png)
+
+* Valid Loss
+![4val.jpg](images/4val.png)
 
 ## 參考資料
 * Yolov4: https://github.com/WongKinYiu/PyTorch_YOLOv4
