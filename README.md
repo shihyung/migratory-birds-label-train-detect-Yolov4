@@ -1,4 +1,5 @@
-# 候鳥 標記/訓練/偵測 (by Yolov4)
+# 從頭開始作候鳥的標記/訓練/偵測 (by Yolov4)
+# Migratory Birds label/train/detect from scratch by Yolov4
 ![1cb.jpg](images/1cb.png)
 
 ## **目的**
