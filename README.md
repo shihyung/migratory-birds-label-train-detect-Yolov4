@@ -1,2 +1,2 @@
 # migratory-bird-detection
-![1cb.jpg](images/1cb.jpg)
+![1cb.jpg](images/1cb.png)
