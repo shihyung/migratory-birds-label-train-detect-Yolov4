@@ -22,8 +22,9 @@
 ![3data.jpg](images/3data.png)
 ### 把檔案全部上傳到google drive後就可以接著在google colab做一些簡單訓練 (GPU: P100)
 
-## 結果
-### 這邊做了幾個不同的參數設定來測試效果: (model_4s, 100 epochs vs. 300 epochs) 與 (300 epochs, model_4s vs. model_4l)
+## 訓練結果
+### 這邊做了幾個不同的參數設定來測試效果: 
+### (model_4s, 100 epochs vs. 300 epochs) 與 (300 epochs, model_4s vs. model_4l)
 ###### python train.py --cfg 'models/yolov4s-mish.yaml' --data data/coco.yaml' --img 640 --batch 16 --epochs 100
 ###### python train.py --cfg 'models/yolov4s-mish.yaml' --data data/coco.yaml' --img 640 --batch 16 --epochs 300
 ###### python train.py --cfg 'models/yolov4l-mish.yaml' --data data/coco.yaml' --img 640 --batch 6 --epochs 300
@@ -39,6 +40,14 @@
 
 * Valid Loss
 ![4val.jpg](images/4val.png)
+### 因為測試圖片相對比較簡單，所以準確度收斂的很高以及損失很低，所以後續就以大模型(4L)與長時間(300 epochs)的結果當作測試。
+
+## 高壓測試
+### 前面訓練的都是簡單的圖片，這邊用一些更複雜的圖片來測試看看效果
+![5v1.jpg](images/5v1.png)
+
+## 增加複雜圖片重新訓練
+![6v1.jpg](images/6v2.png)
 
 ## 參考資料
 * Yolov4: https://github.com/WongKinYiu/PyTorch_YOLOv4
