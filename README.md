@@ -58,7 +58,9 @@
 
 ## 影片測試
 ### 以屏東滿州的鵟鷹影片做為測試，作為生態觀測來說，模型偵測結果應該算是相當不錯!
-![eagle.jpg](images/eagle_d.gif)
+![eagled.jpg](images/eagle_d.gif)
+![eagleb.jpg](images/eagle_b.gif)
+###### 影片來源: Youtube (擷取部分片段，如有侵權，請來信告知，會予以刪除)
 
 ## 參考資料
 * Yolov4: https://github.com/WongKinYiu/PyTorch_YOLOv4
