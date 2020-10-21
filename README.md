@@ -17,6 +17,8 @@
 * center_y = (ymax + ymin) / 2 / image_height
 * box_width = (xmax - xmin) / image_width
 * box_height = (ymax - ymin) / image_height
+### 標記完成的圖片就可以餵給Yolo當訓練囉!
+![2cbox.jpg](images/2cbox.png)
 
 ## 訓練(Training)
 ### 這邊使用的是 Yolov4 作為物件偵測的機器學習套件，把準備好的圖片放入資料夾中，並且以 80/20 比例分成 訓練集(train)與驗證集(valid)，就可以開始使用 Yolo 來訓練。首先修改一下 data/coco.yaml，指定好圖片放置位置路徑，並將類別數量(nc) 改成 nc:1 以及名稱改成  name: ['bird'] (只有鳥類一種分類)，
